@@ -4,7 +4,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>Sequence - BIT :: LT :: DB :: 6 presentation :: Additional</title>
+    <title>Temporal tables - BIT :: LT :: DB :: 6 presentation :: Additional</title>
     <!-- Custom HTML head -->
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="description" content="">
@@ -77,7 +77,7 @@
 
     <nav id="sidebar" class="sidebar" aria-label="Table of contents">
         <div class="sidebar-scrollbox">
-            <ol class="chapter"><li class="chapter-item expanded "><a href="select_into.html"><strong aria-hidden="true">1.</strong> The SELECT INTO statement</a></li><li class="chapter-item expanded "><a href="bulk_insert_statement.html"><strong aria-hidden="true">2.</strong> The BULK INSERT statement</a></li><li class="chapter-item expanded "><a href="merging_data.html"><strong aria-hidden="true">3.</strong> Merging data</a></li><li class="chapter-item expanded "><a href="sequency.html" class="active"><strong aria-hidden="true">4.</strong> Sequence</a></li><li class="chapter-item expanded "><a href="modifying_data_through_table_expression.html"><strong aria-hidden="true">5.</strong> Modifying data through table expressions</a></li><li class="chapter-item expanded "><a href="modification_with_top.html"><strong aria-hidden="true">6.</strong> Modifications with TOP and OFFSET-FETCH</a></li><li class="chapter-item expanded "><a href="the_output_clause.html"><strong aria-hidden="true">7.</strong> The OUTPUT clause</a></li><li class="chapter-item expanded "><a href="window_functions.html"><strong aria-hidden="true">8.</strong> Window functions</a></li><li class="chapter-item expanded "><a href="exercise_1.html"><strong aria-hidden="true">9.</strong> Exercise 1</a></li><li class="chapter-item expanded "><a href="exercise_3.html"><strong aria-hidden="true">10.</strong> Exercise 2</a></li><li class="chapter-item expanded "><a href="exercise_4.html"><strong aria-hidden="true">11.</strong> Exercise 3</a></li><li class="chapter-item expanded "><a href="exercise_5.html"><strong aria-hidden="true">12.</strong> Exercise 4</a></li><li class="chapter-item expanded "><a href="exercise_6.html"><strong aria-hidden="true">13.</strong> Exercise 5</a></li><li class="chapter-item expanded "><a href="exercise_7.html"><strong aria-hidden="true">14.</strong> Exercise 6</a></li><li class="chapter-item expanded "><a href="querying_metada.html"><strong aria-hidden="true">15.</strong> Querying metadata</a></li><li class="chapter-item expanded "><a href="catalog_view.html"><strong aria-hidden="true">16.</strong> Catalog views</a></li><li class="chapter-item expanded "><a href="information_schema_views.html"><strong aria-hidden="true">17.</strong> Information schema views</a></li><li class="chapter-item expanded "><a href="system_stored_procedures.html"><strong aria-hidden="true">18.</strong> System stored procedures and functions</a></li><li class="chapter-item expanded "><a href="temporal_tables.html"><strong aria-hidden="true">19.</strong> Temporal tables</a></li><li class="chapter-item expanded "><a href="creating_temporal_tables.html"><strong aria-hidden="true">20.</strong> Creating temporal tables</a></li><li class="chapter-item expanded "><a href="exercise_8.html"><strong aria-hidden="true">21.</strong> Exercise 7</a></li><li class="chapter-item expanded "><a href="exercise_9.html"><strong aria-hidden="true">22.</strong> Exercise 8</a></li></ol>
+            <ol class="chapter"><li class="chapter-item expanded "><a href="select_into.html"><strong aria-hidden="true">1.</strong> The SELECT INTO statement</a></li><li class="chapter-item expanded "><a href="bulk_insert_statement.html"><strong aria-hidden="true">2.</strong> The BULK INSERT statement</a></li><li class="chapter-item expanded "><a href="merging_data.html"><strong aria-hidden="true">3.</strong> Merging data</a></li><li class="chapter-item expanded "><a href="sequency.html"><strong aria-hidden="true">4.</strong> Sequence</a></li><li class="chapter-item expanded "><a href="modifying_data_through_table_expression.html"><strong aria-hidden="true">5.</strong> Modifying data through table expressions</a></li><li class="chapter-item expanded "><a href="modification_with_top.html"><strong aria-hidden="true">6.</strong> Modifications with TOP and OFFSET-FETCH</a></li><li class="chapter-item expanded "><a href="the_output_clause.html"><strong aria-hidden="true">7.</strong> The OUTPUT clause</a></li><li class="chapter-item expanded "><a href="window_functions.html"><strong aria-hidden="true">8.</strong> Window functions</a></li><li class="chapter-item expanded "><a href="exercise_1.html"><strong aria-hidden="true">9.</strong> Exercise 1</a></li><li class="chapter-item expanded "><a href="exercise_3.html"><strong aria-hidden="true">10.</strong> Exercise 2</a></li><li class="chapter-item expanded "><a href="exercise_4.html"><strong aria-hidden="true">11.</strong> Exercise 3</a></li><li class="chapter-item expanded "><a href="exercise_5.html"><strong aria-hidden="true">12.</strong> Exercise 4</a></li><li class="chapter-item expanded "><a href="exercise_6.html"><strong aria-hidden="true">13.</strong> Exercise 5</a></li><li class="chapter-item expanded "><a href="exercise_7.html"><strong aria-hidden="true">14.</strong> Exercise 6</a></li><li class="chapter-item expanded "><a href="querying_metada.html"><strong aria-hidden="true">15.</strong> Querying metadata</a></li><li class="chapter-item expanded "><a href="catalog_view.html"><strong aria-hidden="true">16.</strong> Catalog views</a></li><li class="chapter-item expanded "><a href="information_schema_views.html"><strong aria-hidden="true">17.</strong> Information schema views</a></li><li class="chapter-item expanded "><a href="system_stored_procedures.html"><strong aria-hidden="true">18.</strong> System stored procedures and functions</a></li><li class="chapter-item expanded "><a href="temporal_tables.html" class="active"><strong aria-hidden="true">19.</strong> Temporal tables</a></li><li class="chapter-item expanded "><a href="creating_temporal_tables.html"><strong aria-hidden="true">20.</strong> Creating temporal tables</a></li><li class="chapter-item expanded "><a href="exercise_8.html"><strong aria-hidden="true">21.</strong> Exercise 7</a></li><li class="chapter-item expanded "><a href="exercise_9.html"><strong aria-hidden="true">22.</strong> Exercise 8</a></li></ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -146,30 +146,21 @@
 
             <div id="content" class="content">
                 <main>
-                    <h1 id="sequence"><a class="header" href="#sequence">Sequence</a></h1>
+                    <h1 id="temporal-tables"><a class="header" href="#temporal-tables">Temporal tables</a></h1>
 <ul>
-<li>T-SQL supports the standard sequence object as an alternative key-generating mechanism for identity.</li>
-<li>One of the advantages of the sequence object is that, unlike identity, it’s not tied to a particular column in a particular table; rather, it’s an independent object in the database.</li>
+<li>When you modify data in tables, normally you lose any trace of the premodified state of the rows. You can access only the current state. What if you need to be able to access historical states of the data? </li>
+<li>Perhaps you need these states for auditing, point-in-time analysis, comparing current states with older states, restoring an older state of rows because of accidental deletion or updating, and so on.</li>
 </ul>
-<pre><code class="language-sql">CREATE SEQUENCE [dbo].[SeqMaxOrderId] AS INT
-  MINVALUE 1,
-  MAXVALUE 10
-  CYCLE; -- Reset to min value after max value reached
-</code></pre>
-<p>Also supports altering</p>
-<pre><code class="language-sql">ALTER SEQUENCE dbo.SeqOrderIDs
-  NO CYCLE;
-</code></pre>
 
                 </main>
 
                 <nav class="nav-wrapper" aria-label="Page navigation">
                     <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="merging_data.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="system_stored_procedures.html" class="mobile-nav-chapters previous"
                         title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="modifying_data_through_table_expression.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="creating_temporal_tables.html" class="mobile-nav-chapters next"
                         title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -179,11 +170,11 @@
         </div>
 
         <nav class="nav-wide-wrapper" aria-label="Page navigation">
-            <a rel="prev" href="merging_data.html" class="nav-chapters previous" title="Previous chapter"
+            <a rel="prev" href="system_stored_procedures.html" class="nav-chapters previous" title="Previous chapter"
                 aria-label="Previous chapter" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
-            <a rel="next" href="modifying_data_through_table_expression.html" class="nav-chapters next" title="Next chapter"
+            <a rel="next" href="creating_temporal_tables.html" class="nav-chapters next" title="Next chapter"
                 aria-label="Next chapter" aria-keyshortcuts="Right">
                 <i class="fa fa-angle-right"></i>
             </a>

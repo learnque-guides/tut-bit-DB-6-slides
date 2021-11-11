@@ -78,7 +78,7 @@
 
     <nav id="sidebar" class="sidebar" aria-label="Table of contents">
         <div class="sidebar-scrollbox">
-            <ol class="chapter"><li class="chapter-item expanded "><a href="select_into.html"><strong aria-hidden="true">1.</strong> The SELECT INTO statement</a></li><li class="chapter-item expanded "><a href="bulk_insert_statement.html"><strong aria-hidden="true">2.</strong> The BULK INSERT statement</a></li><li class="chapter-item expanded "><a href="merging_data.html"><strong aria-hidden="true">3.</strong> Merging data</a></li><li class="chapter-item expanded "><a href="sequency.html"><strong aria-hidden="true">4.</strong> Sequence</a></li><li class="chapter-item expanded "><a href="modifying_data_through_table_expression.html"><strong aria-hidden="true">5.</strong> Modifying data through table expressions</a></li><li class="chapter-item expanded "><a href="modification_with_top.html"><strong aria-hidden="true">6.</strong> Modifications with TOP and OFFSET-FETCH</a></li><li class="chapter-item expanded "><a href="the_output_clause.html"><strong aria-hidden="true">7.</strong> The OUTPUT clause</a></li><li class="chapter-item expanded "><a href="window_functions.html"><strong aria-hidden="true">8.</strong> Window functions</a></li><li class="chapter-item expanded "><a href="exercise_1.html"><strong aria-hidden="true">9.</strong> Exercise 1</a></li><li class="chapter-item expanded "><a href="exercise_2.html"><strong aria-hidden="true">10.</strong> Exercise 2</a></li><li class="chapter-item expanded "><a href="exercise_3.html"><strong aria-hidden="true">11.</strong> Exercise 3</a></li><li class="chapter-item expanded "><a href="exercise_4.html"><strong aria-hidden="true">12.</strong> Exercise 4</a></li><li class="chapter-item expanded "><a href="exercise_5.html"><strong aria-hidden="true">13.</strong> Exercise 5</a></li><li class="chapter-item expanded "><a href="exercise_6.html"><strong aria-hidden="true">14.</strong> Exercise 6</a></li><li class="chapter-item expanded "><a href="exercise_7.html"><strong aria-hidden="true">15.</strong> Exercise 7</a></li></ol>
+            <ol class="chapter"><li class="chapter-item expanded "><a href="select_into.html"><strong aria-hidden="true">1.</strong> The SELECT INTO statement</a></li><li class="chapter-item expanded "><a href="bulk_insert_statement.html"><strong aria-hidden="true">2.</strong> The BULK INSERT statement</a></li><li class="chapter-item expanded "><a href="merging_data.html"><strong aria-hidden="true">3.</strong> Merging data</a></li><li class="chapter-item expanded "><a href="sequency.html"><strong aria-hidden="true">4.</strong> Sequence</a></li><li class="chapter-item expanded "><a href="modifying_data_through_table_expression.html"><strong aria-hidden="true">5.</strong> Modifying data through table expressions</a></li><li class="chapter-item expanded "><a href="modification_with_top.html"><strong aria-hidden="true">6.</strong> Modifications with TOP and OFFSET-FETCH</a></li><li class="chapter-item expanded "><a href="the_output_clause.html"><strong aria-hidden="true">7.</strong> The OUTPUT clause</a></li><li class="chapter-item expanded "><a href="window_functions.html"><strong aria-hidden="true">8.</strong> Window functions</a></li><li class="chapter-item expanded "><a href="exercise_1.html"><strong aria-hidden="true">9.</strong> Exercise 1</a></li><li class="chapter-item expanded "><a href="exercise_3.html"><strong aria-hidden="true">10.</strong> Exercise 2</a></li><li class="chapter-item expanded "><a href="exercise_4.html"><strong aria-hidden="true">11.</strong> Exercise 3</a></li><li class="chapter-item expanded "><a href="exercise_5.html"><strong aria-hidden="true">12.</strong> Exercise 4</a></li><li class="chapter-item expanded "><a href="exercise_6.html"><strong aria-hidden="true">13.</strong> Exercise 5</a></li><li class="chapter-item expanded "><a href="exercise_7.html"><strong aria-hidden="true">14.</strong> Exercise 6</a></li><li class="chapter-item expanded "><a href="querying_metada.html"><strong aria-hidden="true">15.</strong> Querying metadata</a></li><li class="chapter-item expanded "><a href="catalog_view.html"><strong aria-hidden="true">16.</strong> Catalog views</a></li><li class="chapter-item expanded "><a href="information_schema_views.html"><strong aria-hidden="true">17.</strong> Information schema views</a></li><li class="chapter-item expanded "><a href="system_stored_procedures.html"><strong aria-hidden="true">18.</strong> System stored procedures and functions</a></li><li class="chapter-item expanded "><a href="temporal_tables.html"><strong aria-hidden="true">19.</strong> Temporal tables</a></li><li class="chapter-item expanded "><a href="creating_temporal_tables.html"><strong aria-hidden="true">20.</strong> Creating temporal tables</a></li><li class="chapter-item expanded "><a href="exercise_8.html"><strong aria-hidden="true">21.</strong> Exercise 7</a></li><li class="chapter-item expanded "><a href="exercise_9.html"><strong aria-hidden="true">22.</strong> Exercise 8</a></li></ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -278,7 +278,6 @@ CREATE TABLE dbo.Customers
 <li>region: WA</li>
 <li>city: Redmond</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="exercise-2"><a class="header" href="#exercise-2">Exercise 2</a></h1>
 <p>Insert into the dbo.Customers table (you have created it in exercise 1) all customers from Sales.Customers who placed orders.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="exercise-3"><a class="header" href="#exercise-3">Exercise 3</a></h1>
 <p>Use a SELECT INTO statement to create and populate the dbo.Orders table with orders from the Sales.Orders table that were placed in the years 2014 through 2016.</p>
@@ -402,6 +401,150 @@ CREATE TABLE dbo.Customers
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="exercise-7"><a class="header" href="#exercise-7">Exercise 7</a></h1>
 <p>Update all orders in the dbo.Orders table that were placed by United Kingdom customers, and set their shipcountry, shipregion, and shipcity values to the country, region, and city values of the corresponding customers.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="querying-metadata"><a class="header" href="#querying-metadata">Querying metadata</a></h1>
+<p>SQL Server provides tools for getting information about the metadata of objects, such as information about tables in a database and columns in a table. Those tools include catalog views, information schema views, and system stored procedures and functions.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="catalog-views"><a class="header" href="#catalog-views">Catalog views</a></h1>
+<p>Catalog views provide detailed information about objects in the database, including information that is specific to SQL Server. </p>
+<pre><code class="language-sql">SELECT SCHEMA_NAME(schema_id) AS table_schema_name, name AS table_name
+FROM sys.tables;
+</code></pre>
+<p>To get information about columns in a table, you can query the sys.columns table.</p>
+<pre><code class="language-sql">SELECT
+  name AS column_name,
+  TYPE_NAME(system_type_id) AS column_type,
+  max_length,
+  collation_name,
+  is_nullable
+FROM sys.columns
+WHERE object_id = OBJECT_ID(N'Sales.Orders');
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="information-schema-views"><a class="header" href="#information-schema-views">Information schema views</a></h1>
+<p>An information schema view is a set of views that resides in a schema called INFORMATION_SCHEMA and provides metadata information in a standard manner.</p>
+<pre><code class="language-sql">SELECT TABLE_SCHEMA, TABLE_NAME
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_TYPE = N'BASE TABLE';
+</code></pre>
+<pre><code class="language-sql">SELECT
+  COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH,
+  COLLATION_NAME, IS_NULLABLE
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_SCHEMA = N'Sales'
+  AND TABLE_NAME = N'Orders';
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="system-stored-procedures-and-functions"><a class="header" href="#system-stored-procedures-and-functions">System stored procedures and functions</a></h1>
+<p>System stored procedures and functions internally query the system catalog and give you back more &quot;digested&quot; metadata information.</p>
+<p>The sp_tables stored procedure returns a list of objects (such as tables and views) that can be queried in the current database.</p>
+<pre><code class="language-sql">EXEC sp_tables;
+</code></pre>
+<p>The sp_help procedure accepts an object name as input and returns multiple result sets with general information about the object, and also information about columns, indexes, constraints, and more.</p>
+<pre><code class="language-sql">EXEC sys.sp_help
+  @objname = N'Sales.Orders';
+</code></pre>
+<p>The sp_columns procedure returns information about columns in an object. For example, the following code returns information about columns in the Orders table</p>
+<pre><code class="language-sql">EXEC sys.sp_columns
+  @table_name = N'Orders',
+  @table_owner = N'Sales';
+</code></pre>
+<p>The sp_helpconstraint procedure returns information about constraints in an object.</p>
+<pre><code class="language-sql">EXEC sys.sp_helpconstraint
+  @objname = N'Sales.Orders';
+</code></pre>
+<p>More examples for getting information regarding MSSQL:</p>
+<pre><code class="language-sql">SELECT
+  SERVERPROPERTY('ProductLevel');
+
+SELECT
+  DATABASEPROPERTYEX(N'TSQLV4', 'Collation');
+
+SELECT
+  OBJECTPROPERTY(OBJECT_ID(N'Sales.Orders'), 'TableHasPrimaryKey');
+
+SELECT
+  COLUMNPROPERTY(OBJECT_ID(N'Sales.Orders'), N'shipcountry', 'AllowsNull');
+</code></pre>
+<p>More info and examples:</p>
+<p><a href="https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq?view=sql-server-ver15#_FAQ31">https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq?view=sql-server-ver15#_FAQ31</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="temporal-tables"><a class="header" href="#temporal-tables">Temporal tables</a></h1>
+<ul>
+<li>When you modify data in tables, normally you lose any trace of the premodified state of the rows. You can access only the current state. What if you need to be able to access historical states of the data? </li>
+<li>Perhaps you need these states for auditing, point-in-time analysis, comparing current states with older states, restoring an older state of rows because of accidental deletion or updating, and so on.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="creating-temporal-tables"><a class="header" href="#creating-temporal-tables">Creating temporal tables</a></h1>
+<p>When you create a system-versioned temporal table, you need to make sure the table definition has all the following elements:</p>
+<ul>
+<li>A primary key</li>
+<li>Two columns defined as DATETIME2</li>
+<li>A start column that should be marked with the option GENERATED ALWAYS AS ROW START</li>
+<li>An end column that should be marked with the option GENERATED ALWAYS AS ROW END</li>
+<li>A designation of the period columns with the option PERIOD FOR SYSTEM_TIME (<startcol>, <endcol>)</li>
+<li>The table option SYSTEM_VERSIONING, which should be set to ON</li>
+<li>A linked history table (which SQL Server can create for you) to hold the past states of modified rows</li>
+</ul>
+<pre><code class="language-sql">CREATE TABLE dbo.Employees
+(
+  empid      INT                         NOT NULL
+    CONSTRAINT PK_Employees PRIMARY KEY NONCLUSTERED,
+  empname    VARCHAR(25)                 NOT NULL,
+  department VARCHAR(50)                 NOT NULL,
+  salary     NUMERIC(10, 2)              NOT NULL,
+  sysstart   DATETIME2(0)
+    GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+  sysend     DATETIME2(0)
+    GENERATED ALWAYS AS ROW END   HIDDEN NOT NULL,
+  PERIOD FOR SYSTEM_TIME (sysstart, sysend),
+  INDEX ix_Employees CLUSTERED(empid, sysstart, sysend)
+)
+WITH (SYSTEM_VERSIONING = ON ( HISTORY_TABLE = dbo.EmployeesHistory ));
+</code></pre>
+<p>It is possible to enable temporal functionality for table by using:</p>
+<pre><code class="language-sql">ALTER TABLE dbo.Employees ADD
+  sysstart DATETIME2(0) GENERATED ALWAYS AS ROW START HIDDEN NOT NULL
+    CONSTRAINT DFT_Employees_sysstart DEFAULT('19000101'),
+  sysend DATETIME2(0) GENERATED ALWAYS AS ROW END HIDDEN NOT NULL
+    CONSTRAINT DFT_Employees_sysend DEFAULT('99991231 23:59:59'),
+  PERIOD FOR SYSTEM_TIME (sysstart, sysend);
+
+ALTER TABLE dbo.Employees
+  SET ( SYSTEM_VERSIONING = ON ( HISTORY_TABLE = dbo.EmployeesHistory ) );
+</code></pre>
+<p>Modifying temporal tables is similar to modifying regular tables. You modify only the current table with INSERT, UPDATE, DELETE, and MERGE statements. </p>
+<pre><code class="language-sql">INSERT INTO dbo.Employees(empid, empname, department, salary)
+  VALUES(1, 'Sara', 'IT'       , 50000.00),
+        (2, 'Don' , 'HR'       , 45000.00),
+        (3, 'Judy', 'Sales'    , 55000.00),
+        (4, 'Yael', 'Marketing', 55000.00),
+        (5, 'Sven', 'IT'       , 45000.00),
+        (6, 'Paul', 'Sales'    , 40000.00);
+</code></pre>
+<pre><code class="language-sql">SELECT empid, empname, department, salary, sysstart, sysend
+FROM dbo.Employees;
+
+SELECT empid, empname, department, salary, sysstart, sysend
+FROM dbo.EmployeesHistory;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exercise-7-1"><a class="header" href="#exercise-7-1">Exercise 7</a></h1>
+<ul>
+<li>Create a system-versioned temporal table called Departments with an associated history table called DepartmentsHistory.</li>
+<li>The table should have the following columns: 
+<ul>
+<li>deptid INT NOT NULL, </li>
+<li>deptname VARCHAR(25) NOT NULL, </li>
+<li>mgrid INT NOT NULL.</li>
+</ul>
+</li>
+<li>Also include columns called validfrom and validto that define the validity period of the row. Define those with precision zero (1 second), and make them hidden.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exercise-8"><a class="header" href="#exercise-8">Exercise 8</a></h1>
+<p>Insert four rows to the table Departments with the following details:</p>
+<ul>
+<li>deptid: 1, deptname: HR, mgrid: 7</li>
+<li>deptid: 2, deptname: IT, mgrid: 5</li>
+<li>deptid: 3, deptname: Sales, mgrid: 11</li>
+<li>deptid: 4, deptname: Marketing, mgrid: 13</li>
+</ul>
+<p>Look at DepartmentHistory table to see how it record your changes.</p>
+<p>Update the manager ID of department 3 to 13.</p>
+<p>Look at DepartmentHistory table to see how it record your changes.</p>
 
                 </main>
 

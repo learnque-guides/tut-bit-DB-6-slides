@@ -22,3 +22,5 @@ Insert into the dbo.Customers table a row with the following information:
 * country: USA
 * region: WA
 * city: Redmond
+
+Insert into the dbo.Customers table (you have created it in exercise 1) all customers from Sales.Customers who placed orders.
