@@ -1,0 +1,17 @@
+# Summary
+
+- [The SELECT INTO statement](./select_into.md)
+- [The BULK INSERT statement](./bulk_insert_statement.md)
+- [Merging data](./merging_data.md)
+- [Sequence](./sequency.md)
+- [Modifying data through table expressions](./modifying_data_through_table_expression.md)
+- [Modifications with TOP and OFFSET-FETCH](./modification_with_top.md)
+- [The OUTPUT clause](./the_output_clause.md)
+- [Window functions](./window_functions.md)
+- [Exercise 1](./exercise_1.md)
+- [Exercise 2](./exercise_2.md)
+- [Exercise 3](./exercise_3.md)
+- [Exercise 4](./exercise_4.md)
+- [Exercise 5](./exercise_5.md)
+- [Exercise 6](./exercise_6.md)
+- [Exercise 7](./exercise_7.md)
